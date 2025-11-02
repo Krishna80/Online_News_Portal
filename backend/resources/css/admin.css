@@ -1,0 +1,116 @@
+/* ---------- Global Styles ---------- */
+body {
+    min-height: 100vh;
+    background-color: #f5f7fa;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+}
+
+/* ---------- Sidebar ---------- */
+.sidebar {
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    background: #0d6efd;
+    color: white;
+    padding-top: 20px;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.sidebar h3 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+.sidebar a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 12px 20px;
+    margin: 5px 15px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.sidebar a:hover,
+.sidebar a.active {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.logout-btn {
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    width: calc(100% - 30px);
+    text-align: left;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 10px;
+    margin: 10px 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.logout-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* ---------- Main Content ---------- */
+.main-content {
+    margin-left: 260px;
+    padding: 40px 30px;
+    transition: margin-left 0.3s ease;
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    color: #6c757d;
+}
+
+/* ---------- Dashboard Cards ---------- */
+.dashboard-card {
+    background: white;
+    border-radius: 15px;
+    padding: 30px 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.dashboard-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.icon-circle {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.hover-card:hover .icon-circle {
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    .main-content {
+        margin-left: 0;
+    }
+}
