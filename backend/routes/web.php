@@ -28,4 +28,5 @@ Route::middleware('auth:admin')->prefix('admin')->group(function () {
 
     // TinyMCE image upload
     Route::post('articles/upload', [ArticleController::class, 'upload'])->name('articles.upload');
+    
 });

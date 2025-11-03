@@ -48,5 +48,9 @@
     </div>
 @yield('scripts')
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.tiny.cloud/1/th4giv1pblj98knhp1u47h37m9twp6y65ac2hfym6xp4pyo1/tinymce/8/tinymce.min.js"
+    referrerpolicy="origin"></script>
+<script src="{{ asset('js/tinymce-init.js') }}"></script>
+
 </body>
 </html>
