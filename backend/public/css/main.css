@@ -1,0 +1,199 @@
+/* Import website font */
+@import url('https://stockfont.org/?409a66594ebe9eb733db299caff7f5ce29d95aa80eecd21bf18b88bbf221f890');
+
+
+/* ========= Base ========= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #222;
+}
+body {
+  background-color: #f9f9f9;
+}
+
+/* ========= Header & Nav ========= */
+.header {
+  background: #fff;
+  padding: 1rem 0;
+  border-bottom: 1px solid #e2e2e2;
+}
+.header .container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header .logo h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #111;
+}
+.navbar {
+  background: #fff;
+  border-bottom: 1px solid #e2e2e2;
+}
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+.navbar a {
+  color: #333;
+  text-decoration: none;
+  padding: 0.75rem;
+  font-weight: 500;
+}
+.navbar a:hover,
+.navbar .active {
+  color: #0070c9; /* a blue highlight like Reuters uses */
+}
+
+/* Dropdown */
+.navbar li {
+  position: relative;
+}
+.navbar li ul {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #fff;
+  border: 1px solid #e2e2e2;
+  display: none;
+  flex-direction: column;
+  min-width: 180px;
+}
+.navbar li:hover > ul {
+  display: flex;
+}
+.navbar li ul li a {
+  padding: 0.6rem 1rem;
+}
+
+/* ========= Hero / Featured ========= */
+.hero {
+  margin: 1rem 0;
+}
+.hero img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  display: block;
+}
+.hero .hero-text {
+  position: relative;
+  top: -5rem;
+  background: rgba(0,0,0,0.5);
+  color: #fff;
+  padding: 1rem;
+  max-width: 60%;
+}
+
+/* ========= Main Content / Grid ========= */
+.main-content {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 1.5rem;
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  margin-top: 2rem;
+}
+
+/* Articles list */
+.news-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+.news-card {
+  background: #fff;
+  border: 1px solid #e2e2e2;
+  border-radius: 4px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.news-card img {
+  width: 100%;
+  object-fit: cover;
+}
+.news-card .card-content {
+  padding: 1rem;
+  flex: 1;
+}
+.news-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+.news-card p.meta {
+  font-size: 0.875rem;
+  color: #666;
+  margin-bottom: 0.75rem;
+}
+.news-card p.excerpt {
+  flex: 1;
+}
+.news-card a.read-more {
+  display: inline-block;
+  margin-top: 1rem;
+  color: #0070c9;
+  text-decoration: none;
+  font-weight: 600;
+}
+.news-card a.read-more:hover {
+  text-decoration: underline;
+}
+
+/* Sidebar */
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.sidebar .widget {
+  background: #fff;
+  border: 1px solid #e2e2e2;
+  border-radius: 4px;
+  padding: 1rem;
+}
+.sidebar .widget h4 {
+  margin-bottom: 1rem;
+  font-size: 1.125rem;
+  border-bottom: 1px solid #e2e2e2;
+  padding-bottom: 0.5rem;
+}
+
+/* ========= Footer ========= */
+.footer {
+  background: #fff;
+  border-top: 1px solid #e2e2e2;
+  margin-top: 2rem;
+  padding: 1rem 0;
+  text-align: center;
+  color: #666;
+}
+
+/* ========= Responsive ========= */
+@media (max-width: 900px) {
+  .main-content {
+    grid-template-columns: 1fr; /* stack layout */
+  }
+  .hero .hero-text {
+    max-width: 90%;
+    top: -3rem;
+  }
+  .navbar ul {
+    flex-direction: column;
+    align-items: center;
+  }
+}
